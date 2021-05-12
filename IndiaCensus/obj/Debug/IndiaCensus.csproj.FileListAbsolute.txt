@@ -1,0 +1,2 @@
+C:\Users\K.R.DHASHNIGA\source\repos\IndiaCensus\IndiaCensus\obj\Debug\IndiaCensus.csprojAssemblyReference.cache
+C:\Users\K.R.DHASHNIGA\source\repos\IndiaCensus\IndiaCensus\obj\Debug\IndiaCensus.csproj.CoreCompileInputs.cache
