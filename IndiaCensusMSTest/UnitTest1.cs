@@ -15,11 +15,8 @@ namespace IndiaCensusMSTest
         public static string indianStateCensusFilePath = @"C:\Users\K.R.DHASHNIGA\source\repos\IndiaCensus\IndiaCensus\CSVFiles\IndiaStateCensusData.csv";
         public static string indianStateCodeFilePath = @"C:\Users\K.R.DHASHNIGA\source\repos\IndiaCensus\IndiaCensus\CSVFiles\IndiaStateCode.csv";
         public static string wrongHeaderIndianCensusFile = @"C:\Users\K.R.DHASHNIGA\source\repos\IndiaCensus\IndiaCensus\CSVFiles\WrongIndiaStateCensusData.csv";
-        public static string wrongHeaderIndianStateCode = @"C:\Users\K.R.DHASHNIGA\source\repos\IndiaCensus\IndiaCensus\WrongIndianStateCode.csv";
-        public static string wrongIndianStateCensusFilePath = @"C:\Users\K.R.DHASHNIGA\source\repos\IndiaCensus\IndiaCensus\WrongIndianCensusData.txt";
-        public static string wrongIndianStateCensusFileType = @"C:\Users\K.R.DHASHNIGA\source\repos\IndiaCensus\IndiaCensus\IndianStateCensus.txt";
-        public static string wrongIndianStateCodeFilePath = @"C:\Users\K.R.DHASHNIGA\source\repos\IndiaCensus\IndiaCensus\CSVFiles1\WrongIndiaStateCode.csv";
-        public static string wrongIndianStateCodeFiletype = @"C:\Users\K.R.DHASHNIGA\source\repos\IndiaCensus\IndiaCensus\CSVFiles\IndiaStateCode.txt";
+        public static string wrongIndianStateCodeFilePath = @"C:\Users\K.R.DHASHNIGA\source\repos\IndiaCensus\IndiaCensus\CSVFiles\WrongIndiaStateCode.csv";
+        public static string IndianStateCodeFiletype = @"C:\Users\K.R.DHASHNIGA\source\repos\IndiaCensus\IndiaCensus\CSVFiles\IndiaStateCode.txt";
         public static string delimeterIndianStateCodeFilePath = @"C:\Users\K.R.DHASHNIGA\source\repos\IndiaCensus\IndiaCensus\CSVFiles\DelimiterIndiaStateCode.csv";
         public static string delimeterIndianCensusCodeFilePath = @"C:\Users\K.R.DHASHNIGA\source\repos\IndiaCensus\IndiaCensus\CSVFiles\DelimiterIndiaStateCensusData.csv";
 
@@ -52,7 +49,7 @@ namespace IndiaCensusMSTest
         [TestMethod]
         public void GivenWrongIndian()
         {
-            var indianCensusResult = Assert.ThrowsException<CensusAnalyserException>(() => censusAnalyser.LoadCsvFile(IndiaCensus.FileType.INDIAN_STATE_CENSUS, wrongIndianStateCensusFilePath, indianStateCensusHeaders));
+            var indianCensusResult = Assert.ThrowsException<CensusAnalyserException>(() => censusAnalyser.LoadCsvFile(IndiaCensus.FileType.INDIAN_STATE_CENSUS, wrongIndianStateCodeFilePath, indianStateCensusHeaders));
             Assert.AreEqual(CensusAnalyserException.ExceptionType.FILE_NOT_FOUND, indianCensusResult.type);
         }
 
@@ -62,7 +59,7 @@ namespace IndiaCensusMSTest
         [TestMethod]
         public void GivenWrongIndianCensusDataFileType()
         {
-            var indianCensusResult = Assert.ThrowsException<CensusAnalyserException>(() => censusAnalyser.LoadCsvFile(IndiaCensus.FileType.INDIAN_STATE_CENSUS, wrongIndianStateCensusFileType, indianStateCensusHeaders));
+            var indianCensusResult = Assert.ThrowsException<CensusAnalyserException>(() => censusAnalyser.LoadCsvFile(IndiaCensus.FileType.INDIAN_STATE_CENSUS, wrongIndianStateCodeFilePath, indianStateCensusHeaders));
             Assert.AreEqual(CensusAnalyserException.ExceptionType.EXTENSION_NOT_FOUND, indianCensusResult.type);
         }
 
