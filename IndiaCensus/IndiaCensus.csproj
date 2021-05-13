@@ -79,6 +79,7 @@
     <Compile Include="CensusAnalyserException.cs" />
     <Compile Include="CensusFactory.cs" />
     <Compile Include="DAO\IndianStateCensusDAO.cs" />
+    <Compile Include="DAO\IndianStateCodeDAO.cs" />
     <Compile Include="DTO\CensusDTO.cs" />
     <Compile Include="ILoad.cs" />
     <Compile Include="Program.cs" />

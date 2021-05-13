@@ -15,7 +15,9 @@ namespace IndiaCensus
             FILE_NOT_FOUND,
             EXTENSION_NOT_FOUND,
             HEADERS_MISMATCH,
-            INCOREECT_DELIMITER
+            INCOREECT_DELIMITER,
+            INDIAN_STATE_CODE,
+            
         }
 
         public ExceptionType type;

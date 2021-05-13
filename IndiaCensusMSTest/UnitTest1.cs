@@ -24,16 +24,6 @@ namespace IndiaCensusMSTest
         Dictionary<string, CensusDTO> totalRecord;
         Dictionary<string, CensusDTO> stateRecord;
 
-        //setup the instances
-        
-        public void Setup()
-        {
-            censusAnalyser = new CensusAnalyser();
-            totalRecord = new Dictionary<string, CensusDTO>();
-            stateRecord = new Dictionary<string, CensusDTO>();
-        }
-
-        
         // TC1.1 Given the States Census CSV file, Check to ensure the Number of Record matches
         
         [TestMethod]
