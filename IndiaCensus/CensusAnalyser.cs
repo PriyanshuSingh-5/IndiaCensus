@@ -12,7 +12,8 @@ namespace IndiaCensus
     
     public enum FileType
     {
-        INDIAN_STATE_CENSUS
+        INDIAN_STATE_CENSUS,
+            INDIAN_STATE_CODE
     }
 
     public class CensusAnalyser
